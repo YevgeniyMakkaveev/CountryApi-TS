@@ -1,16 +1,29 @@
-import React from 'react';
-import Controls from './Controls';
+import React, {useState} from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './Header'
 import Main from './Main';
+import HomePage from '../pages/HomePage';
+import NotFound from '../pages/404';
+import Details from '../pages/Details';
+import ICountry from '../types/CountrySmall';
+
 
 
 
 const App:React.FC=()=> {
+ const [countries, setCountries] = useState<ICountry[] | []>([]);
+
   return (
     <>
      <Header />
      <Main>
-      <Controls/>
+      <Routes>
+        <Route path="/" element={<HomePage countries={countries} setCountries={setCountries} /> } >
+          
+        </Route>
+        <Route path="/country/:name" element={<Details/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
      </Main>
     </>
   );

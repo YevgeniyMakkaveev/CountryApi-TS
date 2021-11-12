@@ -21,6 +21,7 @@ const InputContainer = styled.label`
 const InputSearch = styled.input.attrs({
   type: "search",
   placeholder: "Search for a country...",
+  autoFocus: true,
 })`
   margin-left: 2rem;
   border: none;

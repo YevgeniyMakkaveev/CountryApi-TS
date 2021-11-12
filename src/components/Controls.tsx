@@ -3,9 +3,20 @@ import Search from "./Search";
 import styled from "styled-components";
 import CustomSelect from "./CustomSelect";
 
-const Controls: React.FC = () => {
+interface IControl{
+  onSearch: (search: string, region: any) => void
+}
+
+const Controls: React.FC<IControl> = ({onSearch}) => {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState<any>("");
+
+      useEffect(() => {
+    const regionValue = region?.value || '';
+    onSearch(search, regionValue);
+
+    // eslint-disable-next-line
+  }, [search, region]);
 
   const Wrapper = styled.div`
     display: flex;
