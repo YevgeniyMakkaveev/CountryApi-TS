@@ -1,6 +1,6 @@
 # REST Countries API with color theme switcher
+[Deploy](https://musing-brahmagupta-1ca2b7.netlify.app/)
 
-when netlify start working deploy will be here.
 ![Design](./design/desktop-preview.jpg)
 
 For this project I use TypeScript, test styled components and practice my skills at grid layout. For routing i use new(at least at the time) version of react router.  
