@@ -42,7 +42,7 @@ const Header: React.FC = () => {
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
-    <div>
+    <>
       <HeaderEl />
       <Container>
         <Wrapper>
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
           </ModeSwtcher>
         </Wrapper>
       </Container>
-    </div>
+    </>
   );
 };
 export default Header;

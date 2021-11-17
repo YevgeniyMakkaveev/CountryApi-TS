@@ -39,6 +39,7 @@ const HomePage: React.FC<IHome> = ({ countries, setCountries }) => {
   useEffect(() => {
     if (!countries.length)
       axios.get(All_Countries).then(({ data }) => setCountries(data));
+      // eslint-disable-next-line
   }, []);
   useEffect(() => {
     handleSearch();

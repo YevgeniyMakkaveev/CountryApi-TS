@@ -1,4 +1,3 @@
-import { title } from "process";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,10 +11,14 @@ overflow: hidden;
 const CardImg = styled.img`
 display: block;
 width: 100%;
-height: 150px;
+height: auto;
 object-fit: cover;
 object-position: center;
 box-shadow: var( --shadow);
+@media (min-width: 767px) {
+width: 100%;
+height: 150px;
+  }
 `;
 const CardBody = styled.div`
 padding: 1rem 1.5rem 1.4rem;
